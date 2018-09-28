@@ -15,12 +15,12 @@ define(
         /**
         *
         * mystep - is the name of the component's .html template,
-        * <Vendor>_<Module>  - is the name of the your module directory.
+        * TnetDev_CustomizeCheckout  - is the name of the your module directory.
         *
         */
         return Component.extend({
             defaults: {
-                template: '<Vendor>_<Module>/mystep'
+                template: 'TnetDev_CustomizeCheckout/mystep'
             },
 
             //add here your logic to display step,
