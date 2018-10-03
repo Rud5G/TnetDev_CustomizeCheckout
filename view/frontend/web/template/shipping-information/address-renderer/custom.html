@@ -1,4 +1,4 @@
-<div class="shipping-address-item" data-bind="css: isSelected() ? 'selected-item' : 'not-selected-item'">
+<!-- ko if: (visible()) -->
     <!-- ko text: address().prefix --><!-- /ko --> <!-- ko text: address().firstname --><!-- /ko --> <!-- ko text: address().middlename --><!-- /ko -->
     <!-- ko text: address().lastname --><!-- /ko --> <!-- ko text: address().suffix --><!-- /ko --><br/>
     <!-- ko text: _.values(address().street).join(", ") --><!-- /ko --><br/>
@@ -17,14 +17,4 @@
             <!-- /ko --><br/>
         <!-- /ko -->
     <!-- /ko -->
-    <!-- ko if: (address().isEditable()) -->
-    <button type="button"
-            class="action edit-address-link"
-            data-bind="click: editAddress, visible: address().isEditable()">
-        <span data-bind="i18n: 'Edit'"></span>
-    </button>
-    <!-- /ko -->
-    <button type="button" data-bind="click: selectAddress" class="action action-select-shipping-item">
-        <span data-bind="i18n: 'Ship Here'"></span>
-    </button>
-</div>
+<!-- /ko -->
